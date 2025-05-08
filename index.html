@@ -116,6 +116,13 @@
       color: #c0c0d6;
       font-size: 0.9rem;
     }
+
+    #downloadMessage {
+      margin-top: 1rem;
+      color: #90ee90;
+      display: none;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -125,6 +132,7 @@
       <h1>Download your Citizenship Note</h1>
       <p>This note contains the required content for the 4th quarter Citizenship class. All students are advised to carefully read and copy the full note into their exercise books. Click below to download and start now!</p>
       <a href="citzn.pdf" class="download" download onclick="handleDownload()">Download PDF</a>
+      <p id="downloadMessage">PDF Downloaded</p>
     </div>
     <div class="image">
       <img src="image.png" alt="Study Illustration">
@@ -137,6 +145,15 @@
     All rights reserved for <strong>Revo Tech</strong> | © 2025
   </footer>
 
-  
+  <script>
+    function handleDownload() {
+      const msg = document.getElementById("downloadMessage");
+      msg.style.display = "block";
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 4000); // Hide message after 4 seconds
+    }
+  </script>
+
 </body>
 </html>
