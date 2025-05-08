@@ -137,17 +137,6 @@
     All rights reserved for <strong>Revo Tech</strong> | © 2025
   </footer>
 
-  <!-- Download Counter Script -->
-  <script>
-    function handleDownload() {
-      let count = parseInt(localStorage.getItem("downloadCount") || "0");
-      count++;
-      localStorage.setItem("downloadCount", count);
-      setTimeout(() => {
-        alert(`Thank you! You have downloaded this ${count} time${count > 1 ? 's' : ''}.`);
-      }, 200);
-    }
-  </script>
-
+  
 </body>
 </html>
